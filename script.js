@@ -1,7 +1,26 @@
 
 const synth = new Tone.Synth();
 
-synth.oscillator.type = 'sawtooth';
+
+// Option to change the type of oscillator used in the synth
+document.getElementById('sine').addEventListener('click', function() {
+    synth.oscillator.type = 'sine';
+});
+
+document.getElementById('square').addEventListener('click', function() {
+    synth.oscillator.type = 'square';
+});
+
+document.getElementById('triangle').addEventListener('click', function() {
+    synth.oscillator.type = 'triangle';
+});
+
+document.getElementById('sawtooth').addEventListener('click', function() {
+    synth.oscillator.type = 'sawtooth';
+});
+
+
+
 
 synth.toMaster();
 
